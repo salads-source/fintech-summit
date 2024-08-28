@@ -1,49 +1,16 @@
-// src/app/registration/page.tsx
 import React from 'react';
+import RegistrationForm from '@/components/registration/RegistrationForm';
 
-const RegistrationPage = () => {
-    return (
-        <div>
-            <h1>DAY 1 WORKSHOP REGISTRATION</h1>
-            <p>Date: 10 Jan 2025</p>
-
-            <form>
-                {/* Name Input */}
-                <div>
-                    <label>Name:</label>
-                    <input type="text" name="name" />
-                </div>
-
-                {/* Email Input */}
-                <div>
-                    <label>Email:</label>
-                    <input type="email" name="email" />
-                </div>
-
-                {/* Workshop Selection */}
-                <div>
-                    <label>Which workshops will you be attending?</label>
-                    <div>
-                        <input type="checkbox" name="workshop1" />
-                        <label>Workshop 1</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="workshop2" />
-                        <label>Workshop 2</label>
-                    </div>
-                </div>
-
-                {/* Questions Input */}
-                <div>
-                    <label>Any questions?</label>
-                    <input type="text" name="questions" />
-                </div>
-
-                {/* Register Button */}
-                <button type="submit">Register</button>
-            </form>
-        </div>
-    );
+const RegistrationPage: React.FC = () => {
+  return (
+    <div className="bg-blue-900 min-h-screen">
+      <div className="container mx-auto p-8">
+        <h1 className="text-3xl font-bold text-center text-white mb-4">DAY 1 WORKSHOP REGISTRATION</h1>
+        <p className="text-center text-white mb-8">Date: 10 Jan 2025</p>
+        <RegistrationForm />
+      </div>
+    </div>
+  );
 };
 
 export default RegistrationPage;

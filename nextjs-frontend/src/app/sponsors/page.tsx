@@ -1,50 +1,18 @@
-// src/app/sponsors/page.tsx
 import React from 'react';
+import SponsorSection from '../../components/sponsors/SponsorSection';
 
 const Sponsors = () => {
+    const platinumSponsors = ["Sponsor 1", "Sponsor 2", "Sponsor 3", "Sponsor 4", "Sponsor 5"];
+    const goldSponsors = ["Sponsor 1", "Sponsor 2", "Sponsor 3", "Sponsor 4", "Sponsor 5"];
+    const silverSponsors = ["Sponsor 1", "Sponsor 2", "Sponsor 3", "Sponsor 4", "Sponsor 5"];
+
     return (
-        <div>
-            <h1>Our Sponsors</h1>
-            
-            <div>
-                {/* Platinum Sponsors */}
-                <div>
-                    <h2>Platinum</h2>
-                    <div>
-                        {/* List of sponsors */}
-                        <p>Sponsor 1</p>
-                        <p>Sponsor 2</p>
-                        <p>Sponsor 3</p>
-                        <p>Sponsor 4</p>
-                        <p>Sponsor 5</p>
-                    </div>
-                </div>
-
-                {/* Gold Sponsors */}
-                <div>
-                    <h2>Gold</h2>
-                    <div>
-                        {/* List of sponsors */}
-                        <p>Sponsor 1</p>
-                        <p>Sponsor 2</p>
-                        <p>Sponsor 3</p>
-                        <p>Sponsor 4</p>
-                        <p>Sponsor 5</p>
-                    </div>
-                </div>
-
-                {/* Silver Sponsors */}
-                <div>
-                    <h2>Silver</h2>
-                    <div>
-                        {/* List of sponsors */}
-                        <p>Sponsor 1</p>
-                        <p>Sponsor 2</p>
-                        <p>Sponsor 3</p>
-                        <p>Sponsor 4</p>
-                        <p>Sponsor 5</p>
-                    </div>
-                </div>
+        <div className="p-8 bg-blue-50 min-h-screen">
+            <h1 className="text-3xl font-bold text-center text-blue-700 mb-8">Our Sponsors</h1>
+            <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+                <SponsorSection title="Platinum" sponsors={platinumSponsors} />
+                <SponsorSection title="Gold" sponsors={goldSponsors} />
+                <SponsorSection title="Silver" sponsors={silverSponsors} />
             </div>
         </div>
     );

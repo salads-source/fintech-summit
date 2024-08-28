@@ -1,33 +1,26 @@
 import React from 'react';
+import AboutSection from '@/components/about/AboutSection';
+import AboutButton from '@/components/about/AboutButton';
 
-export default function AboutPage() {
-    return (
-        <div>
-            <div>
-                <h1>ABOUT US</h1>
-            </div>
-            <div>
-                <div>
-                    <h2>FINTECH SUMMIT</h2>
-                    <div>
-                        {/* Placeholder for content */}
-                        <p>Information about the summit goes here.</p>
-                    </div>
-                </div>
-                <div>
-                    <h2>FINTECH SOCIETY</h2>
-                    <div>
-                        {/* Placeholder for Fintech Society content */}
-                        <img
-                            src="/fintech-logo.png" // Replace with your actual image path
-                            alt="Fintech Society Logo"
-                        />
-                    </div>
-                    <button>
-                        Find out more!
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
-}
+const AboutPage: React.FC = () => {
+  return (
+    <div className="bg-blue-900 min-h-screen">
+      <div className="container mx-auto p-8">
+        <h1 className="text-3xl font-bold text-center text-white mb-8">ABOUT US</h1>
+
+        <AboutSection title="FINTECH SUMMIT" content="Information about the summit goes here." />
+
+        <AboutSection title="FINTECH SOCIETY">
+          <div className="flex justify-center items-center">
+            {/* Replace with an actual image if available */}
+          </div>
+          <div className="flex justify-center">
+            <AboutButton />
+          </div>
+        </AboutSection>
+      </div>
+    </div>
+  );
+};
+
+export default AboutPage;

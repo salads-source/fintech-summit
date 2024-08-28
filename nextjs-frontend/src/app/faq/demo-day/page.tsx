@@ -1,16 +1,19 @@
+import FAQList from '@/components/faq/FAQList';
+import Navbar from '@/components/Navbar';
 import React from 'react';
 
-const demoDayFAQ = () => {
+const faqs = [
+  { question: 'When is the hackathon held?', answer: 'Ans: 29 June 2025' },
+  { question: 'When is the hackathon held?', answer: 'Ans: 29 June 2025' },
+  // Add more FAQs as needed
+];
+
+const demoDayFAQ: React.FC = () => {
   return (
-    <div className="faq-container">
-      <h1>DEMO DAY FAQ</h1>
-      <div className="faq-card">
-        <h3>When is the hackathon held?</h3>
-        <p>Ans: 29 June 2025</p>
-      </div>
-      <div className="faq-card">
-        <h3>When is the hackathon held?</h3>
-        <p>Ans: 29 June 2025</p>
+    <div className="bg-blue-900 min-h-screen">
+      <div className="container mx-auto p-8">
+        <h1 className="text-3xl font-bold text-center text-white mb-8">DEMODAY FAQ</h1>
+        <FAQList faqs={faqs} />
       </div>
     </div>
   );
