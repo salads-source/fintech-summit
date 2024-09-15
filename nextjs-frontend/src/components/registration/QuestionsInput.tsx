@@ -17,7 +17,7 @@ const QuestionsInput: React.FC<QuestionsInputProps> = ({ value, onChange }) => {
         name="questions"
         value={value}
         onChange={onChange}
-        className="w-full p-2 border border-gray-300 rounded"
+        className="w-full p-2 border border-gray-300 rounded text-black"
       />
     </div>
   );
