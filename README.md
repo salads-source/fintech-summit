@@ -11,3 +11,6 @@ eg The page.tsx file located in /src/app/about/ would load when you visit /about
 3. cd fintech-summit/nextjs-frontend
 4. npm install
 5. npm run dev
+
+
+hi
