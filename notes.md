@@ -1,4 +1,4 @@
-installing tailwind for nextjs
+# Running
 
-npm install tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npm install 
+npm run dev
